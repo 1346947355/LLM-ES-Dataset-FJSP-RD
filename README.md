@@ -11,20 +11,8 @@ ________________________________________
 | :--- |
 | Instruction: <br>This flexible job shop scheduling problem has 3 jobs and 3 machines.  Generate a near-optimal schedule.  |
 | System: <br>The makespan is the completion time of the last operation in the schedule.  Each job J has a precedence constraint between its operations O,for example, operation O1_2 must be assigned before O1_3.  Each machine M can process only one operation O of one job J at a time, and once an operation starts, it cannot be interrupted… |
-| Input:<br>
-{"n_jobs": 3, "n_machines": 3, "machines": ["M1", "M2", "M3"], "jobs": [
-<br>{"job_id": "job1", "operations": [{"op_id": "O1_1", "opt_machine_times": {"M1": 8, "M2": 6, "M3": 3}}, {"op_id": "O1_2", "opt_machine_times": {"M2": 9}}]}, 
-<br>{"job_id": "job2", "operations": [{"op_id": "O2_1", "opt_machine_times": {"M1": 5, "M2": 6}}, {"op_id": "O2_2", "opt_machine_times": {"M1": 10}}]}, 
-<br>{"job_id": "job3", "operations": [{"op_id": "O3_1", "opt_machine_times": {"M1": 3}}, {"op_id": "O3_2", "opt_machine_times": {"M2": 5, "M3": 9}}]}]} |
-| Output:<br>
-{"assignments": {"O1_1": "M3", "O1_2": "M2", "O2_1": "M2", "O2_2": "M1", "O3_1": "M1", "O3_2": "M2"}, "sequence": ["O1_1", "O2_1", "O3_1", "O1_2", "O3_2", "O2_2"], "schedule": [
-<br>{"op_id": "O1_1", "machine": "M3", "start": 0, "finish": 3, "proc_time": 3},
-<br>{"op_id": "O2_1", "machine": "M2", "start": 0, "finish": 6, "proc_time": 6},
-<br>{"op_id": "O3_1", "machine": "M1", "start": 0, "finish": 3, "proc_time": 3},
-<br>{"op_id": "O1_2", "machine": "M2", "start": 3, "finish": 12, "proc_time": 9},
-<br>{"op_id": "O3_2", "machine": "M2", "start": 6, "finish": 11, "proc_time": 5},
-<br>{"op_id": "O2_2", "machine": "M1", "start": 12, "finish": 22, "proc_time": 10}],  ….. 
-<br>"makespan": 22} |
+| Input:<br>{"n_jobs": 3, "n_machines": 3, "machines": ["M1", "M2", "M3"], "jobs": [<br>{"job_id": "job1", "operations": [{"op_id": "O1_1", "opt_machine_times": {"M1": 8, "M2": 6, "M3": 3}}, {"op_id": "O1_2", "opt_machine_times": {"M2": 9}}]}, <br>{"job_id": "job2", "operations": [{"op_id": "O2_1", "opt_machine_times": {"M1": 5, "M2": 6}}, {"op_id": "O2_2", "opt_machine_times": {"M1": 10}}]}, <br>{"job_id": "job3", "operations": [{"op_id": "O3_1", "opt_machine_times": {"M1": 3}}, {"op_id": "O3_2", "opt_machine_times": {"M2": 5, "M3": 9}}]}]} |
+| Output:<br>{"assignments": {"O1_1": "M3", "O1_2": "M2", "O2_1": "M2", "O2_2": "M1", "O3_1": "M1", "O3_2": "M2"}, "sequence": ["O1_1", "O2_1", "O3_1", "O1_2", "O3_2", "O2_2"], "schedule": [<br>{"op_id": "O1_1", "machine": "M3", "start": 0, "finish": 3, "proc_time": 3},<br>{"op_id": "O2_1", "machine": "M2", "start": 0, "finish": 6, "proc_time": 6},<br>{"op_id": "O3_1", "machine": "M1", "start": 0, "finish": 3, "proc_time": 3},<br>{"op_id": "O1_2", "machine": "M2", "start": 3, "finish": 12, "proc_time": 9},<br>{"op_id": "O3_2", "machine": "M2", "start": 6, "finish": 11, "proc_time": 5},<br>{"op_id": "O2_2", "machine": "M1", "start": 12, "finish": 22, "proc_time": 10}],  ….. <br>"makespan": 22} |
 
 ________________________________________
 1.2 Dataset Statistics
@@ -154,20 +142,8 @@ ________________________________________
 | :--- |
 | Instruction: <br>This flexible job shop scheduling problem has 3 jobs and 3 machines.  Generate a near-optimal schedule.  |
 | System: <br>The makespan is the completion time of the last operation in the schedule.  Each job J has a precedence constraint between its operations O,for example, operation O1_2 must be assigned before O1_3.  Each machine M can process only one operation O of one job J at a time, and once an operation starts, it cannot be interrupted… |
-| Input:<br>
-{"n_jobs": 3, "n_machines": 3, "machines": ["M1", "M2", "M3"], "jobs": [
-<br>{"job_id": "job1", "operations": [{"op_id": "O1_1", "opt_machine_times": {"M1": 8, "M2": 6, "M3": 3}}, {"op_id": "O1_2", "opt_machine_times": {"M2": 9}}]}, 
-<br>{"job_id": "job2", "operations": [{"op_id": "O2_1", "opt_machine_times": {"M1": 5, "M2": 6}}, {"op_id": "O2_2", "opt_machine_times": {"M1": 10}}]}, 
-<br>{"job_id": "job3", "operations": [{"op_id": "O3_1", "opt_machine_times": {"M1": 3}}, {"op_id": "O3_2", "opt_machine_times": {"M2": 5, "M3": 9}}]}]} |
-| Output:<br>
-{"assignments": {"O1_1": "M3", "O1_2": "M2", "O2_1": "M2", "O2_2": "M1", "O3_1": "M1", "O3_2": "M2"}, "sequence": ["O1_1", "O2_1", "O3_1", "O1_2", "O3_2", "O2_2"], "schedule": [
-<br>{"op_id": "O1_1", "machine": "M3", "start": 0, "finish": 3, "proc_time": 3},
-<br>{"op_id": "O2_1", "machine": "M2", "start": 0, "finish": 6, "proc_time": 6},
-<br>{"op_id": "O3_1", "machine": "M1", "start": 0, "finish": 3, "proc_time": 3},
-<br>{"op_id": "O1_2", "machine": "M2", "start": 3, "finish": 12, "proc_time": 9},
-<br>{"op_id": "O3_2", "machine": "M2", "start": 6, "finish": 11, "proc_time": 5},
-<br>{"op_id": "O2_2", "machine": "M1", "start": 12, "finish": 22, "proc_time": 10}],  ….. 
-<br>"makespan": 22} |
+| Input:<br>{"n_jobs": 3, "n_machines": 3, "machines": ["M1", "M2", "M3"], "jobs": [<br>{"job_id": "job1", "operations": [{"op_id": "O1_1", "opt_machine_times": {"M1": 8, "M2": 6, "M3": 3}}, {"op_id": "O1_2", "opt_machine_times": {"M2": 9}}]}, <br>{"job_id": "job2", "operations": [{"op_id": "O2_1", "opt_machine_times": {"M1": 5, "M2": 6}}, {"op_id": "O2_2", "opt_machine_times": {"M1": 10}}]}, <br>{"job_id": "job3", "operations": [{"op_id": "O3_1", "opt_machine_times": {"M1": 3}}, {"op_id": "O3_2", "opt_machine_times": {"M2": 5, "M3": 9}}]}]} |
+| Output:<br>{"assignments": {"O1_1": "M3", "O1_2": "M2", "O2_1": "M2", "O2_2": "M1", "O3_1": "M1", "O3_2": "M2"}, "sequence": ["O1_1", "O2_1", "O3_1", "O1_2", "O3_2", "O2_2"], "schedule": [<br>{"op_id": "O1_1", "machine": "M3", "start": 0, "finish": 3, "proc_time": 3},<br>{"op_id": "O2_1", "machine": "M2", "start": 0, "finish": 6, "proc_time": 6},<br>{"op_id": "O3_1", "machine": "M1", "start": 0, "finish": 3, "proc_time": 3},<br>{"op_id": "O1_2", "machine": "M2", "start": 3, "finish": 12, "proc_time": 9},<br>{"op_id": "O3_2", "machine": "M2", "start": 6, "finish": 11, "proc_time": 5},<br>{"op_id": "O2_2", "machine": "M1", "start": 12, "finish": 22, "proc_time": 10}],  ….. <br>"makespan": 22} |
 
 ========================================================
 1.2 数据集统计信息
